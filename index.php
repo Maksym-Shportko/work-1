@@ -1,0 +1,228 @@
+<?php
+require_once("config.php");
+  $errors=[];
+  if (empty($errors)) {
+        $connect = $dbConn->prepare('INSERT INTO данные(user_name,Email, Phone_Number) VALUES (
+        :user_name, :Email, :Phone_Number)');
+        $connect->execute(array('user_name' => $_POST["name"], 'Email' => $_POST["email"], 'Phone_Number' => $_POST["phone"]));
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Web Somnium</title>
+	<link rel="icon" type="image/x-icon" href="img/logo.png">
+	
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+	<header class="classic-menu">
+		<div id="header-container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<a href="#">
+						<img src="img/logo.png" alt="" class="header__logo">
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+
+
+	<section class="slide">
+		<div class="slider__inner">
+			<div class="slider" id="first">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="slider__background-image-container">
+							<img src="img/6.jpg" alt="123" class="slider__background-image">
+						</div>	
+					</div>
+				</div>
+				<nav>
+					<ul class="topmenu">
+						<li><a href="#first" class="down">Home</a>
+							<ul class="submenu">
+								<li><a href="#second">Gallery</a></li>
+								<li><a href="#third">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="slider__item-content">
+			<div class="slider__title">
+				<div class="slider__title slide-content">
+					<h2>1Company name</h2>
+					<h3>Lorem ipsum dolor.nameL</h3>
+				</div>
+			</div>
+		</div>
+			</div>
+			<div class="slider" id="second">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="slider__background-image-container">
+							<img src="img/5.jpg" alt="123" class="slider__background-image">
+						</div>	
+					</div>
+				</div>
+				<nav>
+					<ul class="topmenu">
+						<li><a href="#second" class="down">Gallery</a>
+							<ul class="submenu">
+								<li><a href="#first">Home</a></li>
+								<li><a href="#third">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="second-content">
+					<div class="row">
+						<div class="col-lg-4 col-md-8 col-sm-6">
+							<div class="gallery">
+								<div class="gallery-image">
+									<a href="img/1.jpg" data-fancybox="images" >
+										<img src="img/service/1.jpg" alt="" class="gallery">
+										<div class="gallery-hover">
+											<img src="img/icons/1.png" alt="">
+											<span>Landing Page</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="gallery">
+								<div class="gallery-image">
+									<a href="img/2.jpg" data-fancybox="images" >
+										<img src="img/service/2.jpg" alt="" class="gallery">
+										<div class="gallery-hover">
+											<img src="img/icons/1.png" alt="">
+											<span>Сайт-визитка</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-8 col-sm-6">
+							<div class="gallery">
+								<div class="gallery-image">
+									<a href="img/3.jpg" data-fancybox="images" >
+										<img src="img/service/3.jpg" alt="" class="gallery">
+										<div class="gallery-hover">
+											<img src="img/icons/1.png" alt="">
+											<span>Сайт-галерея</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="gallery">
+								<div class="gallery-image">
+									<a href="img/4.jpg" data-fancybox="images" >
+										<img src="img/service/4.jpg" alt="" class="gallery">
+										<div class="gallery-hover">
+											<img src="img/icons/1.png" alt="">
+											<span>Интернет-магазин</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-8 col-sm-6">
+							<div class="gallery">
+								<div class="gallery-image">
+									<a href="img/5.jpg" data-fancybox="images" >
+										<img src="img/service/1.jpg" alt="" class="gallery">
+										<div class="gallery-hover">
+											<img src="img/icons/1.png" alt="">
+											<span>Корпоративный сайт</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="gallery">
+								<div class="gallery-image">
+									<a href="img/6.jpg" data-fancybox="images" >
+										<img src="img/service/2.jpg" alt="" class="gallery">
+										<div class="gallery-hover">
+											<img src="img/icons/1.png" alt="">
+											<span>Блог</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="slider" id="third">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="slider__background-image-container">
+							<img src="img/4.jpg" alt="123" class="slider__background-image">
+						</div>	
+					</div>
+				</div>
+				<nav>
+					<ul class="topmenu">
+						<li><a href="#third" class="down">Contact</a>
+							<ul class="submenu">
+								<li><a href="#first">Home</a></li>
+								<li><a href="#second">Gallery</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</section>		
+
+
+
+	<footer>
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<div class="footer__contacts">		
+					<a class="footer__phone" href="tel:380666782819">+380xxxxxxxx</a>
+					<a class="footer__email" href="#">websomnium@gmail.com</a>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<input type="button" href="#form" class="popup footer__btn" value="Бесплатная консультація" id="get_form">
+				<div class="hidden">
+					<form id="form" action="mail.php" method="post">
+						<input type="text" name="name" placeholder="Имя Фамилия" class="input__form1">
+						<input type="text" name="phone" placeholder="+38 (0хх)-ххх-хх-хх" class="input__form2" >
+						<input type="text" name="email" placeholder="emample@gmail.com" class="input__form3">
+						<textarea name="form__text" id="users__comments" cols="60" rows="15"></textarea>
+						<button id="button__form">ЗАКАЗАТЬ</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
